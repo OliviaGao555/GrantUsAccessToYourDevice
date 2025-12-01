@@ -135,6 +135,7 @@
 		</div>
 
 		<script>
+			// Apply hover effect and click effect to each star image. When all stars clicked, direct to next page.
 			let changedCount = 0;
 			const totalImages = 5;
 
@@ -146,6 +147,7 @@
 					this.classList.add("clicked");
 					changedCount++;
 
+					// Each star clicked renews another image on screen to make it looks like the stars are collected.
 					if (changedCount === 1) {
 						document.getElementById("hand").classList.add("star1");
 					}

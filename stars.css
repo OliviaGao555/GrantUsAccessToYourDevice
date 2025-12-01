@@ -26,6 +26,7 @@ body {
     transform-origin: center top; 
 } 
 
+/* For all interactive images hover and click redirection */
 .star03 {
     content: url("images7/11computer_03.jpg");
     transition: 0.01s ease;

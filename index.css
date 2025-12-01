@@ -7,6 +7,7 @@ body {
 }
 
 .img-wrapper { 
+    /* Position: centered, kept together regardless of window size */
     position: absolute; 
     top: 50%; left: 50%; 
     transform: translate(-50%, -50%); 
@@ -31,6 +32,7 @@ body {
 }
 
 .no-btn:hover {
+    /* Hover to uncover the real button */
     content: url("images/or_button.jpg");
 }
 

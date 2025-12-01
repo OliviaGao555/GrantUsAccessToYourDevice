@@ -35,6 +35,7 @@
 	</div>
 
 	<script>
+		// Apply animation: change displayed images with time, then display interactive button.
 		setTimeout(() => {
 			document.getElementById("sec2").classList.remove("invis");
 			document.getElementById("sec1").classList.add("invis");
@@ -56,6 +57,7 @@
         	document.getElementById(id).classList.remove("invis");
     		});
 			document.getElementById("sec10c").id = "redirect";
+			// To make sure user can't click on button before animation finishes.
 			document.getElementById("redirect").addEventListener("click", function() {
 			window.location.href = "again.html";
 		})

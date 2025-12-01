@@ -8,6 +8,8 @@
 	</head>
 
 	<body> 
+		<!-- All pages use same bgm -->
+		<audio id="sound" src="static.wav" preload="auto"></audio>
 		<!-- All pages have a bg to prevent images splitting while resizing window -->
 		<img src="images/bg.png" class="bg">
 		<!-- Wrap the table -->
@@ -49,5 +51,21 @@
 				</table> 
 			</div>
 		</div> 
+
+		<script>
+			// Play bgm.
+			function startAudio() {
+				const a = document.getElementById('sound');
+				a.volume = 0.01;
+				a.play().catch(() => {});
+				a.addEventListener("ended", () => {
+				a.currentTime = 0;
+				a.play().catch(() => {});
+			});
+			}
+			document.addEventListener('click', startAudio, { once: true });
+			document.addEventListener('touchstart', startAudio, { once: true });
+			document.addEventListener('keydown', startAudio, { once: true });
+		</script>
 	</body>
 </html>

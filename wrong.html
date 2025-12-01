@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="wrong.css">
 	</head>
 <body>
+	<audio id="sound" src="static.wav" preload="auto"></audio>
 	<img id="sec8" src="images8/4.png" class="bg invis">
 	<img id="sec1" src="images8/bg.png" class="bg">
 	<img id="sec2" src="images8/1.png" class="bg invis">
@@ -35,6 +36,20 @@
 	</div>
 
 	<script>
+		// Play bgm.
+		function startAudio() {
+			const a = document.getElementById('sound');
+			a.volume = 0.01;
+			a.play().catch(() => {});
+			a.addEventListener("ended", () => {
+			a.currentTime = 0;
+			a.play().catch(() => {});
+		});
+		}
+		document.addEventListener('click', startAudio, { once: true });
+		document.addEventListener('touchstart', startAudio, { once: true });
+		document.addEventListener('keydown', startAudio, { once: true });
+
 		// Apply animation: change displayed images with time, then display interactive button.
 		setTimeout(() => {
 			document.getElementById("sec2").classList.remove("invis");

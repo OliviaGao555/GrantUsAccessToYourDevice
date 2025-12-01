@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="again.css">
 	</head>
 	<body>
+		<audio id="sound" src="static.wav" preload="auto"></audio>
 		<img src="images9/bg.png" class="bg">
 		<div class="img-wrapper"> 
 			<div class="scale-box">
@@ -55,6 +56,20 @@
 		</div>
 
 		<script>
+			// Play bgm.
+			function startAudio() {
+				const a = document.getElementById('sound');
+				a.volume = 0.01;
+				a.play().catch(() => {});
+				a.addEventListener("ended", () => {
+				a.currentTime = 0;
+				a.play().catch(() => {});
+			});
+			}
+			document.addEventListener('click', startAudio, { once: true });
+			document.addEventListener('touchstart', startAudio, { once: true });
+			document.addEventListener('keydown', startAudio, { once: true });
+
 			// Each time user clicks, show different scenary. Last time to redirect.
 			let changedCount = 0;
 			const totalImages = 7;

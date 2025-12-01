@@ -52,4 +52,14 @@ body {
     width: 310px; 
     height: 254px; 
 }
+
+.img-wrapper {
+transform: translate(-50%, -50%) scale(0.25); /* 4× smaller */
+transform-origin: top left; /* ensures it scales from top-left corner */
+}
+
+.bg {
+width: 310px;  /* 1240 / 4 */
+height: 254px; /* 1016 / 4 */
+}
 }

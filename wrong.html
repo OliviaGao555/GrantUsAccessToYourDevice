@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Grant Us Access to Your Devide</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" href="wrong.css">
+	</head>
+<body>
+	<img id="sec8" src="images8/4.png" class="bg invis">
+	<img id="sec1" src="images8/bg.png" class="bg">
+	<img id="sec2" src="images8/1.png" class="bg invis">
+	<img id="sec4" src="images8/2.png" class="bg invis">
+	<img id="sec6" src="images8/3.png" class="bg invis">
+	<div class="img-wrapper"> 
+		<table id="__01" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="3">
+					<img id="sec10a" src="images8/11computer_01.jpg" class="invis" width="1240" height="492" alt=""></td>
+			</tr>
+			<tr>
+				<td rowspan="2">
+					<img id="sec10b" src="images8/11computer_02.jpg" class="invis" width="386" height="524" alt=""></td>
+				<td>
+					<img id="sec10c" src="images8/11computer_03.jpg" class="invis" width="468" height="32" alt=""></td>
+				<td rowspan="2">
+					<img id="sec10d" src="images8/11computer_04.jpg" class="invis" width="386" height="524" alt=""></td>
+			</tr>
+			<tr>
+				<td>
+					<img id="sec10e" src="images8/11computer_05.jpg" class="invis" width="468" height="492" alt=""></td>
+			</tr>
+		</table>
+	</div>
+
+	<script>
+		setTimeout(() => {
+			document.getElementById("sec2").classList.remove("invis");
+			document.getElementById("sec1").classList.add("invis");
+		}, 1200);
+		setTimeout(() => {
+			document.getElementById("sec4").classList.remove("invis");
+			document.getElementById("sec2").classList.add("invis");
+		}, 2400);
+		setTimeout(() => {
+			document.getElementById("sec6").classList.remove("invis");
+			document.getElementById("sec4").classList.add("invis");
+		}, 3600);
+		setTimeout(() => {
+			document.getElementById("sec8").classList.remove("invis");
+			document.getElementById("sec6").classList.add("invis");
+		}, 4800);
+		setTimeout(() => {
+   			["sec10a","sec10b","sec10c","sec10d","sec10e"].forEach(id => {
+        	document.getElementById(id).classList.remove("invis");
+    		});
+			document.getElementById("sec10c").id = "redirect";
+			document.getElementById("redirect").addEventListener("click", function() {
+			window.location.href = "again.html";
+		})
+		}, 6000);
+	</script>
+</body>
+</html>

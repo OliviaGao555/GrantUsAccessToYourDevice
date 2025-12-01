@@ -1,0 +1,140 @@
+/* Default/Wide Screen Version */ 
+body { 
+    font-family: 'Courier New', Courier, monospace; 
+    background-color: black; 
+    margin-left: 0; 
+    margin-top: 0; 
+    overflow: hidden;
+}
+
+.img-wrapper { 
+    position: absolute; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    max-width: 100vw; 
+    max-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+} 
+
+.img-wrapper table {
+    max-width: 100vw; 
+    max-height: 100vh; 
+    object-fit: contain; 
+    transform-origin: center top; 
+} 
+
+.star03 {
+    content: url("images7/11computer_03.jpg");
+    transition: 0.01s ease;
+    cursor: pointer;
+}
+
+.star03:hover {
+    content: url("images7/11computer_03_2.jpg");
+}
+
+.star06 {
+    content: url("images7/11computer_06.jpg");
+    transition: 0.01s ease;
+    cursor: pointer;
+}
+
+.star06:hover {
+    content: url("images7/11computer_06_2.jpg");
+}
+
+.star09 {
+    content: url("images7/11computer_09.jpg");
+    transition: 0.01s ease;
+    cursor: pointer;
+}
+
+.star09:hover {
+    content: url("images7/11computer_09_2.jpg");
+}
+
+.star11 {
+    content: url("images7/11computer_11.jpg");
+    transition: 0.01s ease;
+    cursor: pointer;
+}
+
+.star11:hover {
+    content: url("images7/11computer_11_2.jpg");
+}
+
+.star16 {
+    content: url("images7/11computer_16.jpg");
+    transition: 0.01s ease;
+    cursor: pointer;
+}
+
+.star16:hover {
+    content: url("images7/11computer_16_2.jpg");
+}
+
+.star03.clicked {
+    content: url("images7/11computer_03_3.jpg");
+    cursor: default;
+}
+
+.star06.clicked {
+    content: url("images7/11computer_06_3.jpg");
+    cursor: default;
+
+}
+
+.star09.clicked {
+    content: url("images7/11computer_09_3.jpg");
+    cursor: default;
+}
+
+.star11.clicked {
+    content: url("images7/11computer_11_3.jpg");
+    cursor: default;
+}
+
+.star16.clicked {
+    content: url("images7/11computer_16_3.jpg");
+    cursor: default;
+}
+
+.star1 {
+    content: url("images7/11computer_19_2.jpg");
+}
+
+.star2 {
+    content: url("images7/11computer_19_3.jpg");
+}
+
+.star3 {
+    content: url("images7/11computer_19_4.jpg");
+}
+
+.star4 {
+    content: url("images7/11computer_19_5.jpg");
+}
+
+.star5 {
+    content: url("images7/11computer_19_6.jpg");
+}
+
+.bg {
+    position: absolute;
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 1240px; 
+    height: 1016px; 
+    display: fixed; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: -1000;
+}
+
+/* Phone Screen Version */ 
+@media (max-width: 500px) {
+
+}

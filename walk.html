@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Grant Us Access to Your Devide</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" href="walk.css">
+	</head>
+
+	<body>
+		<img src="images2/bg.png" class="bg">
+		<div class="img-wrapper"> 
+			<table id="__01" cellpadding="0" cellspacing="0">
+				<tr>
+					<td colspan="3">
+						<img id="img1" img src="images2/11computer_01.jpg" alt="">
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<img id="img2" img src="images2/11computer_02.jpg" alt="">
+					</td>
+					<td>
+						<img id="myButton" img src="images2/11computer_03.jpg" alt="">
+					</td>
+					<td rowspan="2">
+						<img src="images2/11computer_04.jpg" alt="">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images2/11computer_05.jpg" alt="">
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<script>
+		let clickCount = 0;
+
+		document.getElementById("myButton").addEventListener("click", function() {
+			clickCount++;
+
+			if (clickCount === 1) {
+				document.getElementById("img1").src = "images2/11computer_01_2.jpg";
+				document.getElementById("img2").src = "images2/11computer_02_2.jpg";
+			} 
+			else if (clickCount === 2) {
+				document.getElementById("img1").src = "images2/11computer_01_3.jpg";
+				document.getElementById("img2").src = "images2/11computer_02_3.jpg";
+			} 
+			else if (clickCount === 3) {
+				document.getElementById("img1").src = "images2/11computer_01_4.jpg";
+				document.getElementById("img2").src = "images2/11computer_02_4.jpg";
+			}
+			else if (clickCount === 4) {
+				window.location.href = 'error.html';
+			}
+		});
+		</script>
+	</body>
+</html>

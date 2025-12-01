@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Grant Us Access to Your Devide</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" href="final.css">
+	</head>
+	<body>
+		<img src="images10/bg.png" class="bg">
+		<div class="img-wrapper">
+			<div id="textBox" class="floating-text">
+				<h1>Crediits:</h1> 
+				<h2>Artist: Jiangai Gao.</h2>
+				<h2>Instagram: @bbq_ov_yzdyg</h2>
+				<h2>Materials from Canva. Pinterest.</h2>
+				<h2>Images made with Adobe Photoshop 2024.</h2>
+			</div>
+			<table id="__01" cellpadding="0" cellspacing="0">
+				<tr>
+					<td colspan="3">
+						<img src="images10/11computer_01.jpg" width="1240" height="489" alt=""></td>
+				</tr>
+				<tr>
+					<td rowspan="2">
+						<img src="images10/11computer_02.jpg" width="603" height="527" alt=""></td>
+					<td>
+						<img id="button" src="images10/11computer_03_2.jpg" width="34" height="39" alt=""></td>
+					<td rowspan="2">
+						<img src="images10/11computer_04.jpg" width="603" height="527" alt=""></td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images10/11computer_05.jpg" width="34" height="488" alt=""></td>
+				</tr>
+			</table>
+		</div>
+
+		<script>
+			let changedCount = 0;
+			let firstClickDone = false;
+
+			document.querySelector(".floating-text").addEventListener("click", function () {
+				changedCount++;
+				document.getElementById("textBox").classList.add("hidden");
+				document.getElementById("button").src = "images10/11computer_03.jpg";
+				this.style.pointerEvents = "none";
+			});
+
+			document.getElementById("button").addEventListener("click", function () {
+				changedCount++;
+
+				if (changedCount === 2) {
+					setTimeout(() => {
+						window.location.href = "index.html";
+					}, 300);
+				}
+			});
+		</script>
+	</body>
+</html>

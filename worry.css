@@ -1,0 +1,43 @@
+/* Default/Wide Screen Version */ 
+body { 
+    font-family: 'Courier New', Courier, monospace; 
+    background-color: black; 
+    margin-left: 0; 
+    margin-top: 0; 
+}
+
+.img-wrapper { 
+    position: absolute; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    max-width: 100vw; 
+    max-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+} 
+
+.img-wrapper table {
+    max-width: 100vw; 
+    max-height: 100vh; 
+    object-fit: contain; 
+    transform-origin: center top; 
+} 
+
+.bg {
+    position: absolute;
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 1240px; 
+    height: 1016px; 
+    display: fixed; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: -1000;
+}
+
+/* Phone Screen Version */ 
+@media (max-width: 500px) {
+
+}

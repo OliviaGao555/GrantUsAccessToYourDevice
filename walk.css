@@ -45,6 +45,18 @@ body {
     z-index: -1000;
 }
 
+/* Narrow Screen Version */ 
+@media (max-width: 1000px) {
+    .scale-box {
+        transform: scale(0.5);
+    }
+
+    .bg {
+        width: 620px;  
+        height: 508px;
+    }
+}
+
 /* Phone Screen Version */ 
 @media (max-width: 500px) {
     .scale-box {

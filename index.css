@@ -48,5 +48,8 @@ body {
 
 /* Phone Screen Version */ 
 @media (max-width: 500px) {
-
+.phone {
+    width: 310px; 
+    height: 254px; 
+}
 }

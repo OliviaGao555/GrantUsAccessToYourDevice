@@ -34,6 +34,10 @@ body {
     content: url("images/or_button.jpg");
 }
 
+.scale-box {
+    transform-origin: center;
+}
+
 .bg {
     position: absolute;
     top: 50%; left: 50%; 
@@ -48,18 +52,12 @@ body {
 
 /* Phone Screen Version */ 
 @media (max-width: 500px) {
-.phone {
-    width: 310px; 
-    height: 254px; 
-}
+    .scale-box {
+        transform: scale(0.25);   /* REAL scaling happens here */
+    }
 
-.img-wrapper {
-transform: translate(-50%, -50%) scale(0.25); /* 4× smaller */
-transform-origin: top left; /* ensures it scales from top-left corner */
-}
-
-.bg {
-width: 310px;  /* 1240 / 4 */
-height: 254px; /* 1016 / 4 */
-}
+    .bg {
+        width: 310px;  
+        height: 254px;
+    }
 }

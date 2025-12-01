@@ -25,6 +25,10 @@ body {
     transform-origin: center top; 
 } 
 
+.scale-box {
+    transform-origin: center;
+}
+
 .bg {
     position: absolute;
     top: 50%; left: 50%; 
@@ -43,5 +47,12 @@ body {
 
 /* Phone Screen Version */ 
 @media (max-width: 500px) {
+    .scale-box {
+        transform: scale(0.25);   /* REAL scaling happens here */
+    }
 
+    .bg {
+        width: 310px;  
+        height: 254px;
+    }
 }

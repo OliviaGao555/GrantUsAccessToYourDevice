@@ -37,6 +37,10 @@ body {
     z-index: -1000;
 }
 
+.scale-box {
+    transform-origin: center;
+}
+
 #redirect {
     cursor: pointer;
 }
@@ -47,5 +51,12 @@ body {
 
 /* Phone Screen Version */ 
 @media (max-width: 500px) {
+    .scale-box {
+        transform: scale(0.25);   /* REAL scaling happens here */
+    }
 
+    .bg {
+        width: 310px;  
+        height: 254px;
+    }
 }
